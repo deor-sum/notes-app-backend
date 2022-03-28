@@ -48,9 +48,8 @@ class NotesHandler {
     }
   }
 
-  async getNotesHandler(request) {
-    const { id } = request.params;
-    const notes = await this._service.getNotes(id);
+  async getNotesHandler() {
+    const notes = await this._service.getNotes();
     return {
       status: "success",
       data: {
